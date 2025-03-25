@@ -1,0 +1,14 @@
+#container {
+    width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px; 
+}
+
+.square {
+    background-color: lightgray;
+    transition: background-color  0.3s;
+}
+
+
+
