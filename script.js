@@ -4,7 +4,10 @@ function createGrid(size) {
     container.innerHTML = ''; // Очищаем контейнер перед созданием новой сетки
 
     const numberOfSquares = size * size; // Общее количество квадратов
-    const squareSize = 960 / size; // Размер одного квадрата
+
+    // Учитываем зазоры между квадратами
+    const totalGap = (size - 1); // Количество зазоров в строке
+    const squareSize = Math.floor((960 - totalGap) / size); // Размер одного квадрата
 
     for (let i = 0; i < numberOfSquares; i++) {
         const square = document.createElement('div');
