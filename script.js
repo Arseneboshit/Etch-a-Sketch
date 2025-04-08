@@ -1,37 +1,32 @@
 createGrid(16); 
 
 document.getElementById("newGrid").addEventListener("click", function() {
+
     let newSize = prompt("Введите количество квадратов на сторону (до 100):");
 
-    // Проверяем, что введено число, и ограничиваем его до 100
-    newSize = parseInt(newSize);
-    if (isNaN(newSize) || newSize <= 0) {
-        alert("Введите корректное число!");
-        return;
-    }
     if (newSize > 100) {
         newSize = 100;
     }
 
-    // Очищаем контейнер
     document.getElementById("container").innerHTML = '';
 
-    // Создаем новую сетку
+
     createGrid(newSize);
 });
 
+
 function createGrid(size) {
     const container = document.getElementById("container");
+    const numberOfSquares = size * size;
 
-    // Устанавливаем CSS Grid для контейнера
-    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-    container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+    const squareSize = 960 / size; 
 
-    for (let i = 0; i < size * size; i++) {
+    for (let i = 0; i < numberOfSquares; i++) {
         let square = document.createElement('div');
         square.classList.add('square');
+        square.style.width = `${squareSize}px`;
+        square.style.height = `${squareSize}px`;
 
-        // Добавляем обработчик события для изменения цвета при наведении
         square.addEventListener('mouseover', function() {
             square.style.backgroundColor = 'blue';
         });
