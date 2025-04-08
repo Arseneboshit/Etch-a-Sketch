@@ -1,8 +1,8 @@
 /* Стили для контейнера */
 #container {
     width: 960px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid; /* Используем CSS Grid вместо Flexbox */
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr)); /* Адаптивная сетка */
     gap: 1px; /* Зазор между квадратами */
     background-color: black; /* Цвет фона контейнера */
 }
