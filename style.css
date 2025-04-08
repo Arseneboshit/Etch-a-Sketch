@@ -1,14 +1,14 @@
+/* Стили для контейнера */
 #container {
     width: 960px;
     display: flex;
     flex-wrap: wrap;
-    gap: 1px; 
+    gap: 1px; /* Зазор между квадратами */
+    background-color: black; /* Цвет фона контейнера */
 }
 
+/* Стили для квадратов */
 .square {
     background-color: lightgray;
-    transition: background-color  0.3s;
+    transition: background-color 0.3s; /* Плавное изменение цвета */
 }
-
-
-
