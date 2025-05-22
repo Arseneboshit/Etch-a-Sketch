@@ -1,0 +1,19 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 960px;
+  height: 960px;
+  margin: 0 auto;
+  border: 2px solid #ccc;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}
+
+.elem {
+  flex: 1;
+  border: 1px solid green;
+  aspect-ratio: 1 / 1;
+}
